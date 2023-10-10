@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Correr script
-        run: ping 8.8.8.8
+        run: ping -c 4 8.8.8.8
   
