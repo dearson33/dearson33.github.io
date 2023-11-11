@@ -5,7 +5,7 @@ on:
       command:
         description: 'command to run'
         required: true
-        default: echo hola
+        default: echo "hola"
 
 jobs:
   build:
