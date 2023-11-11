@@ -2,8 +2,8 @@ name: comando
 on:
   workflow_dispatch:
     inputs:
-      argumento:
-        description: 'comando a ejecutar'
+      command:
+        description: 'command to run'
         required: true
         default: echo hola
 
