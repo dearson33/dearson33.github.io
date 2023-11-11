@@ -12,5 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Ejecutar comandos en la consola bash
+      shell: bash
     - run: ${{ github.event.inputs.argumento }}"
        
