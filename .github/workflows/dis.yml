@@ -1,16 +1,16 @@
-name: comando
+hname: comando
 on:
   workflow_dispatch:
     inputs:
       argumento:
         description: 'comando a ejecutar'
         required: true
-        default: 'echo "hola"'
+        default: echo "hola"'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Ejecutar comandos en la consola bash
-      run:  ${{ github.event.inputs.argumento }}"
+    - run: ${{ github.event.inputs.argumento }}"
        
