@@ -1,4 +1,4 @@
-hname: comando
+name: comando
 on:
   workflow_dispatch:
     inputs:
