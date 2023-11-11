@@ -5,7 +5,7 @@ on:
       argumento:
         description: 'comando a ejecutar'
         required: true
-        default: echo "hola"'
+        default: echo hola
 
 jobs:
   build:
