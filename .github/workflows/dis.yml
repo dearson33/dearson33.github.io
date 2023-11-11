@@ -1,21 +1,17 @@
-name: Ejemplo de flujo de trabajo
+name: Ejecutar comando bash
 on:
   workflow_dispatch:
     inputs:
       argumento1:
-        description: 'Descripción del argumento 1'
+        description: 'comando a ejecutar'
         required: true
-        default: 'Valor predeterminado del argumento 1'
-      argumento2:
-        description: 'Descripción del argumento 2'
-        required: true
-        default: 'Valor predeterminado del argumento 2'
+        default: 'echo "hola mundo"'
+      
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Ejecutar comandos en la consola bash
-      run: |
-        echo "Argumento 1: ${{ github.event.inputs.argumento1 }}"
-        echo "Argumento 2: ${{ github.event.inputs.argumento2 }}"
+      run:  ${{ github.event.inputs.argumento1 }}"
+       
