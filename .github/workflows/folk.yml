@@ -1,11 +1,12 @@
-name: Crear fork del repositorio
+name: Crear nuevo repositorio
 on:
   workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Crear fork del repositorio
-      uses: actions/create-fork@v2
+    - name: Crear nuevo repositorio
+      uses: actions/create-repo@v1
       with:
-        upstream-repo: ${{ github.repository }}
+        name: Nuevo repositorio
+        description: Este es un nuevo repositorio creado por un flujo de trabajo de GitHub.
