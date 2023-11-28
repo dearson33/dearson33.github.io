@@ -1,0 +1,19 @@
+name: Crear fork del repositorio
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Solicitar nombre del nuevo repositorio
+      uses: actions/github-script@v4
+      id: ask-for-repo-name
+      with:
+        script: |
+          const response = await github.prompt('Por favor, ingrese el nombre del nuevo repositorio:');
+          return response;
+    - name: Crear fork del repositorio
+      uses: actions/create-fork@v2
+      with:
+        upstream-repo: ${{ github.repository }}
+        repo-name: ${{ steps.ask-for-repo-name.outputs.result }}
